@@ -1,0 +1,84 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device --> 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+   <link rel="stylesheet" href="style.css">
+
+   <title>Frontend Mentor | Interactive card details form</title>
+   <script src="script.js" defer></script>
+</head>
+<body>
+
+   <main>
+      <div class="section-one">
+         <div class="cards">
+            <div class="card-back">
+               <img src="images/bg-card-back.png" alt="">
+               <p class="card-back-code">000</p>
+            </div>
+            <div class="card-front">
+               <img src="images/bg-card-front.png" alt="">
+               <img src="images/card-logo.svg" alt="" class="card-logo">
+               <p class="card-front-code">0000 0000 0000 0000</p>
+               <p class="card-name">Jane Appleseed</p>
+               <p class="expiration-date"><span class="mm">00</span>/<span class="yy">00</span></p>
+            </div>
+         </div>
+      </div>
+
+      <div class="section-two">
+         <form action="" class="form form-display">
+
+            <!-- CARDHOLER NAME -->
+            <label for="name">Cardholder name</label>
+            <div class="input-border-name input-border input-border-display">
+               <input type="text" name = "name" id="name" placeholder="e.g. Jane Appleseed">
+            </div>
+            <div><p class="input-error name-error display-none"></p></div>
+
+            <!-- CARD NUMBER -->
+            <label for="card-number">Card Number</label>
+            <div class="input-border-card-number input-border input-border-display">
+               <input type="text" name="card-number" id="card-number" maxlength="16" placeholder="e.g. 1234 5678 9123 0000">
+            </div>
+            <div><p class="input-error num-error display-none">Wrong format, numbers only</p></div>
+
+            <!-- MONTH AND YEAR -->
+            <div class="form-last-row">
+               <div class="form-date">
+                  <label for="exp-date">Exp. Date (MM/YY)</label>
+                  <div class="container-input-date">
+                     <div class="input-border-mm input-border input-border-display">
+                        <input type="text" name="mm" id="mm"  maxlength="2" placeholder="MM">
+                     </div>
+                     <div class="input-border-yy input-border input-border-display">
+                        <input type="text" name="yy" id="yy" maxlength="2" placeholder="YY">
+                     </div>
+                  </div>
+                  <div><p class="input-error mm-error yy-error display-none">Wrong format, numbers only</p></div>
+               </div>
+
+               <!-- CVC -->
+               <div class="form-cvc">
+                  <label for="cvc">CVC</label>
+                  <div class="input-border-cvc input-border input-border-display">
+                     <input type="text" name="cvc" id="cvc" maxlength="3" placeholder="e.g. 123">
+                  </div>
+                  <div><p class="input-error cvc-error display-none">Wrong format, numbers only</p></div>
+               </div>
+            </div>
+            <button type="submit" class="btn-confirm">Confirm</button>
+         </form>
+
+         <div class="thank-you thank-you-display">
+            <div class="icon-complete">
+               <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+            </div>
+            <h2>
+               <p>Thank you!</p>
+            </h2>
+            <p class="description">We've added your card details</p>
+            <button class="btn-continue">Continue</button>
+         </div>
+      </div>
