@@ -197,7 +197,14 @@ expirationDateYearInput.addEventListener("focus", () => {
 expirationDateYearInput.addEventListener("focusout", () => {
    inputBorderExpirationDateYear.classList.add("input-border-display")
 })
+ /* Add this JavaScript code to format input value */
+ const cardNumberInput = document.getElementById('card-number');
 
+ cardNumberInput.addEventListener('input', function(e) {
+   const value = this.value.replace(/\s+/g, ''); /* removes spaces */
+   const formattedValue = value.replace(/(.{4})/g, '$1 '); /* adds space after every 4 characters */
+   this.value = formattedValue;
+ });
 // BUTTON POPUP
 
 const btnConfirm = document.querySelector(".btn-confirm");
