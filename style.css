@@ -138,6 +138,7 @@ body {
 .container-input-date {
    display: flex;
    width: 100%;
+   justify-content: space-between;
 }
 
 form {
@@ -181,16 +182,26 @@ input[type=number] {
 }
 
 .form-last-row {
+   width: 100%;
    display: flex;
    margin-bottom: 25px;
+   justify-content: space-between;
 }
 
 .form-date, .form-cvc {
-   width: 50%;
+   width: 46%;
 }
 
 .form-cvc input {
    width: 100%;
+}
+.container-input-date{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+.input-border-mm, .input-border-yy{
+   width: 45%;
 }
 
 button {
